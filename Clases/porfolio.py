@@ -29,5 +29,5 @@ class InvestmentPortdolio:
         
     def total_profitability(self):
         """
-        
+        calculate the total expected profitability from all the portfolio 
         """
