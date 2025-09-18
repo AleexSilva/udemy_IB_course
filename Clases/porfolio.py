@@ -6,7 +6,7 @@ class InvestmentPortdolio:
         """
         iniciate a portfolio investment from an empty list
         """
-        self.investment = []
+        self.investments = []
     
     def add_investment(self,asset_name,capital,expected_profitability):
         """
@@ -23,7 +23,7 @@ class InvestmentPortdolio:
             "Expected_profitability": expected_profitability 
         }
         
-        self.investment.append(investment)
+        self.investments.append(investment)
         print(f"Investment on {asset_name}: ${capital} wiht an expected profitability: {expected_profitability}%")
         
         
@@ -33,8 +33,23 @@ class InvestmentPortdolio:
         """
         
         total_rentability = 0
-        for inv in self.investment:
+        for inv in self.investments:
             # profitability for each investment = capital * (profitability/100)
             total_rentability+= inv["capital"] * (inv['profitability']/100)
         
         print(f"Total expected profitability from the portfolio: {total_rentability:.2f} ")
+        
+        return total_rentability
+    
+    def show_investments(self):
+        """
+        Show all the investments from the protfolio
+        """
+        if len(self.investments) == 0:
+            print("There are no investment on the portfolio")
+        else:
+            print('Investment Portfolio:')
+            print('\n')
+            for inv in self.investments:
+                print(f'- Asset: {inv['asset']}, capital: {inv['capital']}, profitability{inv['profitability']}%')
+            
