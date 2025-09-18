@@ -8,7 +8,7 @@ class InvestmentPortdolio:
         """
         self.investment = []
     
-    def add_inverstment(self,asset_name,capital,expected_profitability):
+    def add_investment(self,asset_name,capital,expected_profitability):
         """
         Add a new investment to the porfolio
         Params:
@@ -33,6 +33,8 @@ class InvestmentPortdolio:
         """
         
         total_rentability = 0
-        for inv in self.add_inverstment:
+        for inv in self.investment:
             # profitability for each investment = capital * (profitability/100)
-            pass
+            total_rentability+= inv["capital"] * (inv['profitability']/100)
+        
+        print(f"Total expected profitability from the portfolio: {total_rentability:.2f} ")
