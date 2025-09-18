@@ -19,12 +19,12 @@ class InvestmentPortdolio:
         # Add investment to the porfolio
         investment = {
             "Asset": asset_name,
-            "capital": capital,
+            "Capital": capital,
             "Expected_profitability": expected_profitability 
         }
         
         self.investments.append(investment)
-        print(f"Investment on {asset_name}: ${capital} wiht an expected profitability: {expected_profitability}%")
+        print(f"Investment on {asset_name}: ${capital} with an expected profitability: {expected_profitability}%")
         
         
     def total_profitability(self):
@@ -35,7 +35,7 @@ class InvestmentPortdolio:
         total_rentability = 0
         for inv in self.investments:
             # profitability for each investment = capital * (profitability/100)
-            total_rentability+= inv["capital"] * (inv['profitability']/100)
+            total_rentability+= inv["Capital"] * (inv['Expected_profitability']/100)
         
         print(f"Total expected profitability from the portfolio: {total_rentability:.2f} ")
         
@@ -51,5 +51,16 @@ class InvestmentPortdolio:
             print('Investment Portfolio:')
             print('\n')
             for inv in self.investments:
-                print(f'- Asset: {inv['asset']}, capital: {inv['capital']}, profitability{inv['profitability']}%')
+                print(f'- Asset: {inv['Asset']}, Capital: {inv['Capital']}, Profitability: {inv['Expected_profitability']}%')
             
+# How to use: Investment Portfolio
+
+portfolio = InvestmentPortdolio()
+
+portfolio.add_investment(asset_name='AAPL', capital=1000, expected_profitability=8)
+portfolio.add_investment(asset_name='GOOGL', capital=800, expected_profitability=10)
+portfolio.add_investment(asset_name='BTC', capital=600, expected_profitability=20)
+
+# Show all the investments
+
+portfolio.show_investments()
