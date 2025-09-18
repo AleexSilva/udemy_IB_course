@@ -31,3 +31,8 @@ class InvestmentPortdolio:
         """
         calculate the total expected profitability from all the portfolio 
         """
+        
+        total_rentability = 0
+        for inv in self.add_inverstment:
+            # profitability for each investment = capital * (profitability/100)
+            pass
