@@ -11,4 +11,14 @@ class Book:
         self.author = author
         self.availablety = True
         
+    def borrow(self):
+        """
+        Mark the book as borrowed if there is available
+        """
+        if self.availablety:
+            self.availablety = False
+            print(f'{self.title} have been borrowed')
+        else:
+            print(f'Sorry, but {self.title} is not available')
+    
         
