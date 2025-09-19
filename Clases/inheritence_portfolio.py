@@ -21,4 +21,10 @@ class Book:
         else:
             print(f'Sorry, but {self.title} is not available')
     
+    def returns (self):
+        """
+        Mark the book as available for loan
+        """
+        self.availablety = True
+        print(f'{self.title} have been returned')
         
