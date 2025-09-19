@@ -55,12 +55,16 @@ class InvestmentPortdolio:
             
 # How to use: Investment Portfolio
 
+# Instance creation:
 portfolio = InvestmentPortdolio()
 
+# Add investment
 portfolio.add_investment(asset_name='AAPL', capital=1000, expected_profitability=8)
 portfolio.add_investment(asset_name='GOOGL', capital=800, expected_profitability=10)
 portfolio.add_investment(asset_name='BTC', capital=600, expected_profitability=20)
 
 # Show all the investments
-
 portfolio.show_investments()
+
+# Expected profitability
+portfolio.total_profitability()
