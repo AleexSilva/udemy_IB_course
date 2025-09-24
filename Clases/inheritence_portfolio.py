@@ -47,5 +47,11 @@ class Users:
         """
         print(f'{self.user} request the book {book.title}')
         book.borrow()
-        
+    
+    def retun_book(self,book):
+        """
+        Return a book which was requested
+        """
+        print(f'{self.user} has returned the book {book.title}. NOw is available for loan')
+        book.returns()
 
