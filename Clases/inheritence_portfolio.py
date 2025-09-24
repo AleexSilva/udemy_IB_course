@@ -35,4 +35,17 @@ class Users:
     Retpresent an individual who request or retun a book.
     """
     
+    def __init__(self,user):
+        """
+        User Constructor
+        """
+        self.user = user
+    
+    def request_loan(self,book):
+        """
+        Method to request a book from the system
+        """
+        print(f'{self.user} request the book {book.title}')
+        book.borrow()
+        
 
