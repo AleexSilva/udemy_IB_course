@@ -65,3 +65,10 @@ class LibrarySystem(Book,Users):
             Book.__init__(self,title=title,author=author)
             Users.__init__(self,user=user)
         
+        def manage_loan(self):
+            """
+            request a book loan 
+            """
+            self.request_loan(self)
+        
+
