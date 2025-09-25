@@ -55,3 +55,13 @@ class Users:
         print(f'{self.user} has returned the book {book.title}. NOw is available for loan')
         book.returns()
 
+# Class to combine all functionalities from users and books
+
+class LibrarySystem(Book,Users):
+        """
+        Class that represent a library system
+        """
+        def __init__(self,title,author,user):
+            Book.__init__(self,title=title,author=author)
+            Users.__init__(self,user=user)
+        
