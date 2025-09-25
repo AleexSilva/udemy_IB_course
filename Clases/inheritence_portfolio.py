@@ -71,4 +71,10 @@ class LibrarySystem(Book,Users):
             """
             self.request_loan(self)
         
+        def manage_return(self):
+            """
+            Return a book that have had borrowed
+            """
+            self.retun_book(self)
+            
 
