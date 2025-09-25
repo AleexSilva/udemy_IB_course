@@ -78,3 +78,17 @@ class LibrarySystem(Book,Users):
             self.retun_book(self)
             
 
+# Usage Example
+
+system1 = LibrarySystem(title='Sherlock Holmes',author='Arthur Conan Doyle',user='John Green') 
+
+system1.manage_loan()
+
+print(f"Author: {system1.author}")
+print(f"Book Title: {system1.title}")
+print(f"User: {system1.user}")
+print(f"Availability: {system1.availability}") 
+
+system1.manage_return()
+
+print(f"Availability: {system1.availability}") 
